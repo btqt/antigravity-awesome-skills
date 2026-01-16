@@ -412,5 +412,17 @@
     "path": "skills/github-workflow-automation",
     "name": "github-workflow-automation",
     "description": "Automate GitHub workflows with AI assistance. Includes PR reviews, issue triage, CI/CD integration, and Git operations. Use when automating GitHub workflows, setting up PR review automation, creating GitHub Actions, or triaging issues."
+  },
+  {
+    "id": "address-github-comments",
+    "path": "skills/address-github-comments",
+    "name": "address-github-comments",
+    "description": "Use when you need to address review or issue comments on an open GitHub Pull Request using the gh CLI."
+  },
+  {
+    "id": "concise-planning",
+    "path": "skills/concise-planning",
+    "name": "concise-planning",
+    "description": "Use when a user asks for a plan for a coding task, to generate a clear, actionable, and atomic checklist."
   }
 ]

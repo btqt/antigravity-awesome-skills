@@ -44,11 +44,13 @@ Below is the complete list of available skills. Each skill folder contains a `SK
 
 | Skill Name                       | Description                                                    | Path                                           |
 | :------------------------------- | :------------------------------------------------------------- | :--------------------------------------------- |
+| **Address GitHub Comments**      | Systematic PR feedback handling using gh CLI.                  | `skills/address-github-comments` ⭐ NEW        |
 | **Algorithmic Art**              | Creative generative art using p5.js and seeded randomness.     | `skills/algorithmic-art`                       |
 | **App Store Optimization**       | Complete ASO toolkit for iOS and Android app performance.      | `skills/app-store-optimization`                |
 | **Autonomous Agent Patterns**    | Design patterns for autonomous coding agents and tools.        | `skills/autonomous-agent-patterns` ⭐ NEW      |
 | **AWS Pentesting**               | Specialized security assessment for Amazon Web Services.       | `skills/aws-penetration-testing`               |
 | **Backend Guidelines**           | Core architecture patterns for Node/Express microservices.     | `skills/backend-dev-guidelines`                |
+| **Concise Planning**             | Atomic, actionable task planning and checklists.               | `skills/concise-planning` ⭐ NEW               |
 | **Brainstorming**                | Requirement discovery and intent exploration framework.        | `skills/brainstorming`                         |
 | **Brand Guidelines (Anthropic)** | Official Anthropic brand styling and visual standards.         | `skills/brand-guidelines-anthropic` ⭐ NEW     |
 | **Brand Guidelines (Community)** | Community-contributed brand guidelines and templates.          | `skills/brand-guidelines-community`            |

@@ -25,15 +25,15 @@ This repository provides essential skills to transform your AI assistant into a 
 
 ## 📍 Table of Contents
 
-- [🚀 New Here? Start Here!](#-new-here-start-here)
-- [🔌 Compatibility & Invocation](#-compatibility--invocation)
-- [📦 Features & Categories](#-features--categories)
-- [🎁 Curated Collections (Bundles)](#-curated-collections)
-- [📜 Full Skill Registry](#-full-skill-registry-253253)
-- [🛠️ Installation](#-installation)
-- [🤝 How to Contribute](#-how-to-contribute)
-- [👥 Contributors & Credits](#-credits--sources)
-- [⚖️ License](#-license)
+- [🚀 New Here? Start Here!](#new-here-start-here)
+- [🔌 Compatibility & Invocation](#compatibility--invocation)
+- [📦 Features & Categories](#features--categories)
+- [🎁 Curated Collections (Bundles)](#curated-collections)
+- [📜 Full Skill Registry](#full-skill-registry-253253)
+- [🛠️ Installation](#installation)
+- [🤝 How to Contribute](#how-to-contribute)
+- [👥 Contributors & Credits](#credits--sources)
+- [⚖️ License](#license)
 
 ---
 

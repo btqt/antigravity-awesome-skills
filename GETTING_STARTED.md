@@ -1,231 +1,108 @@
-# Getting Started with Antigravity Awesome Skills
+# Getting Started with Antigravity Awesome Skills (V3)
 
-**New here? This guide will help you understand and use this repository in 5 minutes!**
+**New here? This guide will help you supercharge your AI Agent in 5 minutes.**
 
 ---
 
 ## 🤔 What Are "Skills"?
 
-Think of skills as **specialized instruction manuals** for AI coding assistants.
+AI Agents (like **Claude Code**, **Gemini**, **Cursor**) are smart, but they lack specific knowledge about your tools.
+**Skills** are specialized instruction manuals (markdown files) that teach your AI how to perform specific tasks perfectly, every time.
 
-**Simple analogy:** Just like you might hire different experts (a designer, a security expert, a marketer), these skills let your AI assistant become an expert in specific areas when you need them.
-
----
-
-## 📦 What's Inside This Repository?
-
-This repo contains **233 ready-to-use skills** organized in the `skills/` folder. Each skill is a folder with at least one file: `SKILL.md`
-
-```
-skills/
-├── brainstorming/
-│   └── SKILL.md          ← The skill definition
-├── stripe-integration/
-│   └── SKILL.md
-├── react-best-practices/
-│   └── SKILL.md
-└── ... (176 more skills)
-```
+**Analogy:** Your AI is a brilliant intern. **Skills** are the SOPs (Standard Operating Procedures) that make them a Senior Engineer.
 
 ---
 
-## How Do Skills Work?
+## ⚡️ Quick Start: The "Starter Packs"
 
-### Step 1: Install Skills
+Don't panic about the 250+ skills. You don't need them all at once.
+We have curated **Starter Packs** to get you running immediately.
 
-Copy the skills to your AI tool's directory:
+### 1. Install the Repo
+
+Copy the skills to your agent's folder:
 
 ```bash
-# For most AI tools (Claude Code, Gemini CLI, etc.)
+# Universal Installation (works for most agents)
 git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skills
 ```
 
-### Step 2: Use a Skill
+### 2. Pick Your Persona
 
-In your AI chat, mention the skill:
+Find the bundle that matches your role (see [docs/BUNDLES.md](docs/BUNDLES.md)):
 
-```
-@brainstorming help me design a todo app
-```
-
-or
-
-```
-/stripe-integration add payment processing to my app
-```
-
-### Step 3: The AI Becomes an Expert
-
-The AI loads that skill's knowledge and helps you with specialized expertise!
+| Persona               | Bundle Name    | What's Inside?                                    |
+| :-------------------- | :------------- | :------------------------------------------------ |
+| **Web Developer**     | `Web Wizard`   | React Patterns, Tailwind mastery, Frontend Design |
+| **Security Engineer** | `Hacker Pack`  | OWASP, Metasploit, Pentest Methodology            |
+| **Manager / PM**      | `Product Pack` | Brainstorming, Planning, SEO, Strategy            |
+| **Everything**        | `Essentials`   | Clean Code, Planning, Validation (The Basics)     |
 
 ---
 
-## Which AI Tools Work With This?
+## 🚀 How to Use a Skill
 
-| Tool                | Works?     | Installation Path                     |
-| ------------------- | ---------- | ------------------------------------- |
-| **Claude Code**     | ✅ Yes     | `.claude/skills/` or `.agent/skills/` |
-| **Gemini CLI**      | ✅ Yes     | `.gemini/skills/` or `.agent/skills/` |
-| **Cursor**          | ✅ Yes     | `.cursor/skills/`                     |
-| **GitHub Copilot**  | ⚠️ Partial | Copy to `.github/copilot/`            |
-| **Antigravity IDE** | ✅ Yes     | `.agent/skills/`                      |
+Once installed, just talk to your AI naturally.
 
----
+### Example 1: Planning a Feature (**Essentials**)
 
-## Skill Categories (Simplified)
+> "Use **@brainstorming** to help me design a new login flow."
 
-### **Creative & Design** (10 skills)
+**What happens:** The AI loads the brainstorming skill, asks you structured questions, and produces a professional spec.
 
-Make beautiful things: UI design, art, themes, web components
+### Example 2: Checking Your Code (**Web Wizard**)
 
-- Try: `@frontend-design`, `@canvas-design`, `@ui-ux-pro-max`
+> "Run **@lint-and-validate** on this file and fix errors."
 
-### **Development** (25 skills)
+**What happens:** The AI follows strict linting rules defined in the skill to clean your code.
 
-Write better code: testing, debugging, React patterns, architecture
+### Example 3: Security Audit (**Hacker Pack**)
 
-- Try: `@test-driven-development`, `@systematic-debugging`, `@react-best-practices`
+> "Use **@api-security-best-practices** to review my API endpoints."
 
-### **Security** (50 skills)
-
-Ethical hacking and penetration testing tools
-
-- Try: `@ethical-hacking-methodology`, `@burp-suite-testing`
-
-### **AI & Agents** (30 skills)
-
-Build AI apps: RAG, LangGraph, prompt engineering, voice agents
-
-- Try: `@rag-engineer`, `@prompt-engineering`, `@langgraph`
-
-### **Documents** (4 skills)
-
-Work with Word, Excel, PowerPoint, PDF files
-
-- Try: `@docx-official`, `@xlsx-official`, `@pdf-official`
-
-### **Marketing** (23 skills)
-
-Grow your product: SEO, copywriting, ads, email campaigns
-
-- Try: `@copywriting`, `@seo-audit`, `@page-cro`
-
-### **Integrations** (25 skills)
-
-Connect to services: Stripe, Firebase, Twilio, Discord, Slack
-
-- Try: `@stripe-integration`, `@firebase`, `@clerk-auth`
+**What happens:** The AI audits your code against OWASP standards.
 
 ---
 
-## Your First Skill: A Quick Example
+## 🔌 Supported Tools
 
-Let's try the **brainstorming** skill:
-
-1. **Open your AI assistant** (Claude Code, Cursor, etc.)
-
-2. **Type this:**
-
-   ```
-   @brainstorming I want to build a simple weather app
-   ```
-
-3. **What happens:**
-   - The AI loads the brainstorming skill
-   - It asks you questions one at a time
-   - It helps you design the app before coding
-   - It creates a design document for you
-
-4. **Result:** You get a well-thought-out plan instead of jumping straight to code!
+| Tool            | Status          | Path              |
+| :-------------- | :-------------- | :---------------- |
+| **Claude Code** | ✅ Full Support | `.claude/skills/` |
+| **Gemini CLI**  | ✅ Full Support | `.gemini/skills/` |
+| **Antigravity** | ✅ Native       | `.agent/skills/`  |
+| **Cursor**      | ✅ Native       | `.cursor/skills/` |
+| **Copilot**     | ⚠️ Text Only    | Manual copy-paste |
 
 ---
 
-## How to Find the Right Skill
+## 🛡️ Trust & Safety (New in V3)
 
-### Method 1: Browse by Category
+We classify skills so you know what you're running:
 
-Check the [Full Skill Registry](README.md#full-skill-registry-233233) in the main README
+- 🟣 **Official**: Maintained by Anthropic/Google/Vendors (High Trust).
+- 🔵 **Safe**: Community skills that are non-destructive (Read-only/Planning).
+- 🔴 **Risk**: Skills that modify systems or perform security tests (Authorized Use Only).
 
-### Method 2: Search by Keyword
-
-Use your file explorer or terminal:
-
-```bash
-# Find skills related to "testing"
-ls skills/ | grep test
-
-# Find skills related to "auth"
-ls skills/ | grep auth
-```
-
-### Method 3: Look at the Index
-
-Check `skills_index.json` for a machine-readable list
+_Check the [Full Registry](README.md#full-skill-registry-253253) for risk labels._
 
 ---
 
-## 🤝 Want to Contribute?
+## ❓ FAQ
 
-Great! Here's how:
+**Q: Do I need to install all 250 skills?**
+A: You clone the whole repo, but your AI only _reads_ the ones you ask for (or that are relevant). It's lightweight!
 
-### Option 1: Improve Documentation
+**Q: Can I make my own skills?**
+A: Yes! Use the **@skill-creator** skill to build your own.
 
-- Make READMEs clearer
-- Add more examples
-- Fix typos or confusing parts
-
-### Option 2: Create a New Skill
-
-See our [CONTRIBUTING.md](CONTRIBUTING.md) for step-by-step instructions
-
-### Option 3: Report Issues
-
-Found something confusing? [Open an issue](https://github.com/sickn33/antigravity-awesome-skills/issues)
+**Q: Is this free?**
+A: Yes, MIT License. Open Source forever.
 
 ---
 
-## ❓ Common Questions
+## ⏭️ Next Steps
 
-### Q: Do I need to install all 233 skills?
-
-**A:** No! Clone the whole repo, and your AI will only load skills when you use them.
-
-### Q: Can I create my own skills?
-
-**A:** Yes! Check out the `@skill-creator` skill or read [CONTRIBUTING.md](CONTRIBUTING.md)
-
-### Q: What if my AI tool isn't listed?
-
-**A:** If it supports the `SKILL.md` format, try `.agent/skills/` - it's the universal path.
-
-### Q: Are these skills free?
-
-**A:** Yes! MIT License. Use them however you want.
-
-### Q: Do skills work offline?
-
-**A:** The skill files are local, but your AI assistant needs internet to function.
-
----
-
-## Next Steps
-
-1. ✅ Install the skills in your AI tool
-2. ✅ Try 2-3 skills from different categories
-3. ✅ Read [CONTRIBUTING.md](CONTRIBUTING.md) if you want to help
-4. ✅ Star the repo if you find it useful! ⭐
-
----
-
-## 💡 Pro Tips
-
-- **Start with `@brainstorming`** before building anything new
-- **Use `@systematic-debugging`** when you're stuck on a bug
-- **Try `@test-driven-development`** to write better code
-- **Explore `@skill-creator`** to make your own skills
-
----
-
-**Still confused?** Open an issue and we'll help you out! 🙌
-
-**Ready to dive deeper?** Check out the main [README.md](README.md) for the complete skill list.
+1.  [Browse the Bundles](docs/BUNDLES.md)
+2.  [See Real-World Examples](docs/EXAMPLES.md)
+3.  [Contribute a Skill](CONTRIBUTING.md)

@@ -1,4 +1,3 @@
-```yaml
 ---
 name: schema-markup
 description: >
@@ -9,7 +8,6 @@ description: >
   safely according to Google guidelines.
 allowed-tools: Read, Glob, Grep
 ---
-```
 
 ---
 
@@ -20,11 +18,11 @@ You are an expert in **structured data and schema markup** with a focus on
 
 Your responsibility is to:
 
-* Determine **whether schema markup is appropriate**
-* Identify **which schema types are valid and eligible**
-* Prevent invalid, misleading, or spammy markup
-* Design **maintainable, correct JSON-LD**
-* Avoid over-markup that creates false expectations
+- Determine **whether schema markup is appropriate**
+- Identify **which schema types are valid and eligible**
+- Prevent invalid, misleading, or spammy markup
+- Design **maintainable, correct JSON-LD**
+- Avoid over-markup that creates false expectations
 
 You do **not** guarantee rich results.
 You do **not** add schema that misrepresents content.
@@ -69,9 +67,9 @@ This is a **diagnostic score**, not a promise of rich results.
 
 #### 1. Content–Schema Alignment (0–25)
 
-* Schema reflects **visible, user-facing content**
-* Marked entities actually exist on the page
-* No hidden or implied content
+- Schema reflects **visible, user-facing content**
+- Marked entities actually exist on the page
+- No hidden or implied content
 
 **Automatic failure** if schema describes content not shown.
 
@@ -79,41 +77,41 @@ This is a **diagnostic score**, not a promise of rich results.
 
 #### 2. Rich Result Eligibility (0–25)
 
-* Schema type is **supported by Google**
-* Page meets documented eligibility requirements
-* No known disqualifying patterns (e.g. self-serving reviews)
+- Schema type is **supported by Google**
+- Page meets documented eligibility requirements
+- No known disqualifying patterns (e.g. self-serving reviews)
 
 ---
 
 #### 3. Data Completeness & Accuracy (0–20)
 
-* All required properties present
-* Values are correct, current, and formatted properly
-* No placeholders or fabricated data
+- All required properties present
+- Values are correct, current, and formatted properly
+- No placeholders or fabricated data
 
 ---
 
 #### 4. Technical Correctness (0–15)
 
-* Valid JSON-LD
-* Correct nesting and types
-* No syntax, enum, or formatting errors
+- Valid JSON-LD
+- Correct nesting and types
+- No syntax, enum, or formatting errors
 
 ---
 
 #### 5. Maintenance & Sustainability (0–10)
 
-* Data can be kept in sync with content
-* Updates won’t break schema
-* Suitable for templates if scaled
+- Data can be kept in sync with content
+- Updates won’t break schema
+- Suitable for templates if scaled
 
 ---
 
 #### 6. Spam / Policy Risk (0–5)
 
-* No deceptive intent
-* No over-markup
-* No attempt to game rich results
+- No deceptive intent
+- No over-markup
+- No attempt to game rich results
 
 ---
 
@@ -136,21 +134,21 @@ If verdict is **Do Not Implement**, stop and explain why.
 
 ### 1. Page Type
 
-* What kind of page is this?
-* Primary content entity
-* Single-entity vs multi-entity page
+- What kind of page is this?
+- Primary content entity
+- Single-entity vs multi-entity page
 
 ### 2. Current State
 
-* Existing schema present?
-* Errors or warnings?
-* Rich results currently shown?
+- Existing schema present?
+- Errors or warnings?
+- Rich results currently shown?
 
 ### 3. Objective
 
-* Which rich result (if any) is targeted?
-* Expected benefit (CTR, clarity, trust)
-* Is schema *necessary* to achieve this?
+- Which rich result (if any) is targeted?
+- Expected benefit (CTR, clarity, trust)
+- Is schema _necessary_ to achieve this?
 
 ---
 
@@ -158,39 +156,39 @@ If verdict is **Do Not Implement**, stop and explain why.
 
 ### 1. Accuracy Over Ambition
 
-* Schema must match visible content exactly
-* Do not “add content for schema”
-* Remove schema if content is removed
+- Schema must match visible content exactly
+- Do not “add content for schema”
+- Remove schema if content is removed
 
 ---
 
 ### 2. Google First, Schema.org Second
 
-* Follow **Google rich result documentation**
-* Schema.org allows more than Google supports
-* Unsupported types provide minimal SEO value
+- Follow **Google rich result documentation**
+- Schema.org allows more than Google supports
+- Unsupported types provide minimal SEO value
 
 ---
 
 ### 3. Minimal, Purposeful Markup
 
-* Add only schema that serves a clear purpose
-* Avoid redundant or decorative markup
-* More schema ≠ better SEO
+- Add only schema that serves a clear purpose
+- Avoid redundant or decorative markup
+- More schema ≠ better SEO
 
 ---
 
 ### 4. Continuous Validation
 
-* Validate before deployment
-* Monitor Search Console enhancements
-* Fix errors promptly
+- Validate before deployment
+- Monitor Search Console enhancements
+- Fix errors promptly
 
 ---
 
 ## Supported & Common Schema Types
 
-*(Only implement when eligibility criteria are met.)*
+_(Only implement when eligibility criteria are met.)_
 
 ### Organization
 
@@ -221,9 +219,9 @@ Use for: SaaS apps and tools
 
 Use only when:
 
-* Questions and answers are visible
-* Not used for promotional content
-* Not user-generated without moderation
+- Questions and answers are visible
+- Not used for promotional content
+- Not user-generated without moderation
 
 ---
 
@@ -231,8 +229,8 @@ Use only when:
 
 Use only for:
 
-* Genuine step-by-step instructional content
-* Not marketing funnels
+- Genuine step-by-step instructional content
+- Not marketing funnels
 
 ---
 
@@ -252,9 +250,9 @@ Use for: real, physical business locations
 
 **Strict rules:**
 
-* Reviews must be genuine
-* No self-serving reviews
-* Ratings must match visible content
+- Reviews must be genuine
+- No self-serving reviews
+- Ratings must match visible content
 
 ---
 
@@ -270,9 +268,9 @@ Use `@graph` when representing multiple entities.
 
 Rules:
 
-* One primary entity per page
-* Others must relate logically
-* Avoid conflicting entity definitions
+- One primary entity per page
+- Others must relate logically
+- Avoid conflicting entity definitions
 
 ---
 
@@ -280,17 +278,17 @@ Rules:
 
 ### Required Tools
 
-* Google Rich Results Test
-* Schema.org Validator
-* Search Console Enhancements
+- Google Rich Results Test
+- Schema.org Validator
+- Search Console Enhancements
 
 ### Common Failure Patterns
 
-* Missing required properties
-* Mismatched values
-* Hidden or fabricated data
-* Incorrect enum values
-* Dates not in ISO 8601
+- Missing required properties
+- Mismatched values
+- Hidden or fabricated data
+- Incorrect enum values
+- Dates not in ISO 8601
 
 ---
 
@@ -298,19 +296,19 @@ Rules:
 
 ### Static Sites
 
-* Embed JSON-LD in templates
-* Use includes for reuse
+- Embed JSON-LD in templates
+- Use includes for reuse
 
 ### Frameworks (React / Next.js)
 
-* Server-side rendered JSON-LD
-* Data serialized directly from source
+- Server-side rendered JSON-LD
+- Data serialized directly from source
 
 ### CMS / WordPress
 
-* Prefer structured plugins
-* Use custom fields for dynamic values
-* Avoid hardcoded schema in themes
+- Prefer structured plugins
+- Use custom fields for dynamic values
+- Avoid hardcoded schema in themes
 
 ---
 
@@ -318,9 +316,9 @@ Rules:
 
 ### Schema Strategy Summary
 
-* Eligibility Index score + verdict
-* Supported schema types
-* Risks and constraints
+- Eligibility Index score + verdict
+- Supported schema types
+- Risks and constraints
 
 ### JSON-LD Implementation
 
@@ -338,10 +336,10 @@ Where and how to add it
 
 ### Validation Checklist
 
-* [ ] Valid JSON-LD
-* [ ] Passes Rich Results Test
-* [ ] Matches visible content
-* [ ] Meets Google eligibility rules
+- [ ] Valid JSON-LD
+- [ ] Passes Rich Results Test
+- [ ] Matches visible content
+- [ ] Meets Google eligibility rules
 
 ---
 
@@ -357,9 +355,9 @@ Where and how to add it
 
 ## Related Skills
 
-* **seo-audit** – Full SEO review including schema
-* **programmatic-seo** – Templated schema at scale
-* **analytics-tracking** – Measure rich result impact
+- **seo-audit** – Full SEO review including schema
+- **programmatic-seo** – Templated schema at scale
+- **analytics-tracking** – Measure rich result impact
 
 ```
 

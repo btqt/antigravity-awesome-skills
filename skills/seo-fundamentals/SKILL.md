@@ -1,4 +1,3 @@
-```yaml
 ---
 name: seo-fundamentals
 description: >
@@ -7,14 +6,13 @@ description: >
   *why* SEO works, not how to execute specific optimizations.
 allowed-tools: Read, Glob, Grep
 ---
-```
 
 ---
 
 # SEO Fundamentals
 
 > **Foundational principles for sustainable search visibility.**
-> This skill explains *how search engines evaluate quality*, not tactical shortcuts.
+> This skill explains _how search engines evaluate quality_, not tactical shortcuts.
 
 ---
 
@@ -46,9 +44,9 @@ Core Web Vitals measure **how users experience a page**, not whether it deserves
 
 **Important context:**
 
-* CWV rarely override poor content
-* They matter most when content quality is comparable
-* Failing CWV can *hold back* otherwise good pages
+- CWV rarely override poor content
+- They matter most when content quality is comparable
+- Failing CWV can _hold back_ otherwise good pages
 
 ---
 
@@ -125,17 +123,17 @@ Search engines evaluate **output quality**, not authorship method.
 
 ### Effective Use
 
-* AI as a drafting or research assistant
-* Human review for accuracy and clarity
-* Original insights and synthesis
-* Clear accountability
+- AI as a drafting or research assistant
+- Human review for accuracy and clarity
+- Original insights and synthesis
+- Clear accountability
 
 ### Risky Use
 
-* Publishing unedited AI output
-* Factual errors or hallucinations
-* Thin or duplicated content
-* Keyword-driven text with no value
+- Publishing unedited AI output
+- Factual errors or hallucinations
+- Thin or duplicated content
+- Keyword-driven text with no value
 
 ---
 
@@ -171,6 +169,5 @@ SEO fundamentals should be validated using **multiple signals**, not single metr
 ---
 
 > **Key Principle:**
-> Sustainable SEO is built on *useful content*, *technical clarity*, and *trust over time*.
+> Sustainable SEO is built on _useful content_, _technical clarity_, and _trust over time_.
 > There are no permanent shortcuts.
-

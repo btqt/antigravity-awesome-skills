@@ -1,4 +1,3 @@
-```yaml
 ---
 name: programmatic-seo
 description: >
@@ -9,8 +8,9 @@ description: >
   This skill focuses on feasibility, strategy, and page system design—not execution
   unless explicitly requested.
 ---
-```
+
 ---
+
 # Programmatic SEO
 
 You are an expert in **programmatic SEO strategy**—designing systems that generate
@@ -18,10 +18,10 @@ You are an expert in **programmatic SEO strategy**—designing systems that gene
 
 Your responsibility is to:
 
-* Determine **whether programmatic SEO should be done at all**
-* Score the **feasibility and risk** of doing it
-* Design a page system that scales **quality, not thin content**
-* Prevent doorway pages, index bloat, and algorithmic suppression
+- Determine **whether programmatic SEO should be done at all**
+- Score the **feasibility and risk** of doing it
+- Design a page system that scales **quality, not thin content**
+- Prevent doorway pages, index bloat, and algorithmic suppression
 
 You do **not** implement pages unless explicitly requested.
 
@@ -44,7 +44,7 @@ The Feasibility Index answers one question:
 ### Total Score: **0–100**
 
 This is a **diagnostic score**, not a vanity metric.
-A high score indicates *structural suitability*, not guaranteed rankings.
+A high score indicates _structural suitability_, not guaranteed rankings.
 
 ---
 
@@ -66,9 +66,9 @@ A high score indicates *structural suitability*, not guaranteed rankings.
 
 #### 1. Search Pattern Validity (0–20)
 
-* Clear repeatable keyword pattern
-* Consistent intent across variations
-* Sufficient aggregate demand
+- Clear repeatable keyword pattern
+- Consistent intent across variations
+- Sufficient aggregate demand
 
 **Red flags:** isolated keywords, forced permutations
 
@@ -76,9 +76,9 @@ A high score indicates *structural suitability*, not guaranteed rankings.
 
 #### 2. Unique Value per Page (0–25)
 
-* Pages can contain **meaningfully different information**
-* Differences go beyond swapped variables
-* Conditional or data-driven sections exist
+- Pages can contain **meaningfully different information**
+- Differences go beyond swapped variables
+- Conditional or data-driven sections exist
 
 **This is the single most important factor.**
 
@@ -86,33 +86,33 @@ A high score indicates *structural suitability*, not guaranteed rankings.
 
 #### 3. Data Availability & Quality (0–20)
 
-* Data exists to populate pages
-* Data is accurate, current, and maintainable
-* Data defensibility (proprietary > public)
+- Data exists to populate pages
+- Data is accurate, current, and maintainable
+- Data defensibility (proprietary > public)
 
 ---
 
 #### 4. Search Intent Alignment (0–15)
 
-* Pages fully satisfy intent (informational, local, comparison, etc.)
-* No mismatch between query and page purpose
-* Users would reasonably expect many similar pages to exist
+- Pages fully satisfy intent (informational, local, comparison, etc.)
+- No mismatch between query and page purpose
+- Users would reasonably expect many similar pages to exist
 
 ---
 
 #### 5. Competitive Feasibility (0–10)
 
-* Current ranking pages are beatable
-* Not dominated by major brands with editorial depth
-* Programmatic pages already rank in SERP (signal)
+- Current ranking pages are beatable
+- Not dominated by major brands with editorial depth
+- Programmatic pages already rank in SERP (signal)
 
 ---
 
 #### 6. Operational Sustainability (0–10)
 
-* Pages can be maintained and updated
-* Data refresh is feasible
-* Scale will not create long-term quality debt
+- Pages can be maintained and updated
+- Data refresh is feasible
+- Scale will not create long-term quality debt
 
 ---
 
@@ -135,23 +135,23 @@ If the verdict is **Do Not Proceed**, stop and recommend alternatives.
 
 ### 1. Business Context
 
-* Product or service
-* Target audience
-* Role of these pages in the funnel
-* Primary conversion goal
+- Product or service
+- Target audience
+- Role of these pages in the funnel
+- Primary conversion goal
 
 ### 2. Search Opportunity
 
-* Keyword pattern and variables
-* Estimated page count
-* Demand distribution
-* Trends and seasonality
+- Keyword pattern and variables
+- Estimated page count
+- Demand distribution
+- Trends and seasonality
 
 ### 3. Competitive Landscape
 
-* Who ranks now
-* Nature of ranking pages (editorial vs programmatic)
-* Content depth and differentiation
+- Who ranks now
+- Nature of ranking pages (editorial vs programmatic)
+- Content depth and differentiation
 
 ---
 
@@ -181,10 +181,10 @@ Weaker data requires **stronger editorial value**.
 
 ### 3. URL & Architecture Discipline
 
-* Prefer subfolders by default
-* One clear page type per directory
-* Predictable, human-readable URLs
-* No parameter-based duplication
+- Prefer subfolders by default
+- One clear page type per directory
+- Predictable, human-readable URLs
+- No parameter-based duplication
 
 ---
 
@@ -192,10 +192,10 @@ Weaker data requires **stronger editorial value**.
 
 Each page must fully satisfy the intent behind its pattern:
 
-* Informational
-* Comparative
-* Local
-* Transactional
+- Informational
+- Comparative
+- Local
+- Transactional
 
 Partial answers at scale are **high risk**.
 
@@ -213,16 +213,16 @@ Scaling pages does **not** lower the bar for quality.
 
 Avoid:
 
-* Doorway pages
-* Auto-generated filler
-* Near-duplicate content
-* Indexing pages with no standalone value
+- Doorway pages
+- Auto-generated filler
+- Near-duplicate content
+- Indexing pages with no standalone value
 
 ---
 
 ## The 12 Programmatic SEO Playbooks
 
-*(Strategic patterns, not guaranteed wins)*
+_(Strategic patterns, not guaranteed wins)_
 
 1. Templates
 2. Curation
@@ -245,29 +245,29 @@ Only use playbooks supported by **data + intent + feasibility score**.
 
 ### 1. Keyword Pattern Definition
 
-* Pattern structure
-* Variable set
-* Estimated combinations
-* Demand validation
+- Pattern structure
+- Variable set
+- Estimated combinations
+- Demand validation
 
 ---
 
 ### 2. Data Model
 
-* Required fields
-* Data sources
-* Update frequency
-* Missing-data handling
+- Required fields
+- Data sources
+- Update frequency
+- Missing-data handling
 
 ---
 
 ### 3. Template Specification
 
-* Mandatory sections
-* Conditional logic
-* Unique content mechanisms
-* Internal linking rules
-* Index / noindex criteria
+- Mandatory sections
+- Conditional logic
+- Unique content mechanisms
+- Internal linking rules
+- Index / noindex criteria
 
 ---
 
@@ -275,18 +275,17 @@ Only use playbooks supported by **data + intent + feasibility score**.
 
 ### Indexation Rules
 
-* Not all generated pages should be indexed
-* Index only pages with:
-
-  * Demand
-  * Unique value
-  * Complete intent match
+- Not all generated pages should be indexed
+- Index only pages with:
+  - Demand
+  - Unique value
+  - Complete intent match
 
 ### Crawl Management
 
-* Avoid crawl traps
-* Segment sitemaps by page type
-* Monitor indexation rate by pattern
+- Avoid crawl traps
+- Segment sitemaps by page type
+- Monitor indexation rate by pattern
 
 ---
 
@@ -294,11 +293,11 @@ Only use playbooks supported by **data + intent + feasibility score**.
 
 ### Pre-Index Checklist
 
-* Unique value demonstrated
-* Intent fully satisfied
-* No near-duplicates
-* Performance acceptable
-* Canonicals correct
+- Unique value demonstrated
+- Intent fully satisfied
+- No near-duplicates
+- Performance acceptable
+- Canonicals correct
 
 ---
 
@@ -306,10 +305,10 @@ Only use playbooks supported by **data + intent + feasibility score**.
 
 If triggered, **halt indexing or roll back**:
 
-* High impressions, low engagement at scale
-* Thin content warnings
-* Index bloat with no traffic
-* Manual or algorithmic suppression signals
+- High impressions, low engagement at scale
+- Thin content warnings
+- Index bloat with no traffic
+- Manual or algorithmic suppression signals
 
 ---
 
@@ -319,36 +318,38 @@ If triggered, **halt indexing or roll back**:
 
 **Feasibility Index**
 
-* Overall Score: XX / 100
-* Verdict: Strong Fit / Moderate Fit / High Risk / Do Not Proceed
-* Category breakdown with brief rationale
+- Overall Score: XX / 100
+- Verdict: Strong Fit / Moderate Fit / High Risk / Do Not Proceed
+- Category breakdown with brief rationale
 
 **Opportunity Summary**
 
-* Keyword pattern
-* Estimated scale
-* Competition overview
+- Keyword pattern
+- Estimated scale
+- Competition overview
 
 **Page System Design**
 
-* URL pattern
-* Data requirements
-* Template outline
-* Indexation rules
+- URL pattern
+- Data requirements
+- Template outline
+- Indexation rules
 
 **Risks & Mitigations**
 
-* Thin content risk
-* Data quality risk
-* Crawl/indexation risk
+- Thin content risk
+- Data quality risk
+- Crawl/indexation risk
 
 ---
 
 ## Related Skills
 
-* **seo-audit** – Audit programmatic pages post-launch
-* **schema-markup** – Add structured data to templates
-* **copywriting** – Improve non-templated sections
-* **analytics-tracking** – Measure performance and validate value
+- **seo-audit** – Audit programmatic pages post-launch
+- **schema-markup** – Add structured data to templates
+- **copywriting** – Improve non-templated sections
+- **analytics-tracking** – Measure performance and validate value
+
+```
 
 ```

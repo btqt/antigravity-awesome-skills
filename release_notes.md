@@ -1,36 +1,36 @@
-## [4.10.0] - 2026-02-06 - "Composio Automation + .NET Backend"
+## [5.0.0] - 2026-02-10 - "Antigravity Workflows Foundation"
 
-> This release significantly expands hands-on automation coverage while adding a production-oriented .NET backend skill.
+> First-class Workflows are now available to orchestrate multiple skills through guided execution playbooks.
 
-### Added
+### 🚀 New Skills
 
-- **79 new skills total**.
-- **78 Composio/Rube automation skills** (PR #64), covering practical workflows across:
-- CRM/sales (`HubSpot`, `Salesforce`, `Pipedrive`, `Zoho CRM`, `Close`)
-- Collaboration/project ops (`Notion`, `ClickUp`, `Asana`, `Jira`, `Confluence`, `Trello`, `Monday`)
-- Messaging/support (`Slack`, `Discord`, `Teams`, `Intercom`, `Freshdesk`, `Zendesk`)
-- Analytics/marketing (`Google Analytics`, `Mixpanel`, `PostHog`, `Segment`, `Mailchimp`, `Klaviyo`)
-- Dev/infra operations (`GitHub`, `GitLab`, `CircleCI`, `Datadog`, `PagerDuty`, `Vercel`, `Render`)
-- **1 new `dotnet-backend` skill** (PR #65) with detailed ASP.NET Core 8+ guidance:
-- Minimal API and controller patterns
-- EF Core data-access patterns
-- JWT authentication implementation
-- Background service templates
-- Explicit "When to Use" and "Limitations" sections
-- **Registry growth**: 634 -> 713 indexed skills.
+### 🧭 [antigravity-workflows](skills/antigravity-workflows/)
 
-### Changed
+**Orchestrates multi-step outcomes using curated workflow playbooks.**
+This new skill routes users from high-level goals to concrete execution steps across related skills and bundles.
 
-- Regenerated and synchronized discovery artifacts:
-- `README.md`
-- `skills_index.json`
-- `CATALOG.md`
-- `data/catalog.json`
-- `data/bundles.json`
-- `data/aliases.json`
-- Updated release metadata and published tag/release `v4.10.0`.
+- **Key Feature 1**: Workflow routing for SaaS MVP, Security Audit, AI Agent Systems, and Browser QA.
+- **Key Feature 2**: Explicit step-by-step outputs with prerequisites, recommended skills, and validation checkpoints.
 
-### Contributors
+> **Try it:** `Use @antigravity-workflows to run ship-saas-mvp for my project.`
 
-- [@sohamganatra](https://github.com/sohamganatra)
-- [@Nguyen-Van-Chan](https://github.com/Nguyen-Van-Chan)
+---
+
+## 📦 Improvements
+
+- **Workflow Registry**: Added `data/workflows.json` for machine-readable workflow metadata.
+- **Workflow Docs**: Added `docs/WORKFLOWS.md` to distinguish Bundles vs Workflows and provide practical execution playbooks.
+- **Trinity Sync**: Updated `README.md`, `docs/GETTING_STARTED.md`, and `docs/FAQ.md` for workflow onboarding.
+- **Go QA Path**: Added optional `@go-playwright` wiring in QA/E2E workflow steps.
+- **Registry Update**: Catalog regenerated; repository now tracks 714 skills.
+
+## 👥 Credits
+
+A huge shoutout to our community and maintainers:
+
+- **@Walapalam** for the Workflows concept request ([Issue #72](https://github.com/sickn33/antigravity-awesome-skills/issues/72))
+- **@sickn33** for workflow integration, release preparation, and maintenance updates
+
+---
+
+_Upgrade now: `git pull origin main` to fetch the latest skills._

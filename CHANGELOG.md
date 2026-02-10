@@ -7,6 +7,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [5.0.0] - 2026-02-10 - "Antigravity Workflows Foundation"
+
+> Workflows are now first-class: users can run guided, multi-skill playbooks instead of manually composing skills one by one.
+
+### Added
+
+- **New orchestration skill**: `antigravity-workflows`
+  - `skills/antigravity-workflows/SKILL.md`
+  - `skills/antigravity-workflows/resources/implementation-playbook.md`
+- **New workflow documentation**: `docs/WORKFLOWS.md`
+  - Introduces the Workflows model and differentiates it from Bundles.
+  - Provides execution playbooks with prerequisites, ordered steps, and prompt examples.
+- **New machine-readable workflow registry**: `data/workflows.json`
+  - `ship-saas-mvp`
+  - `security-audit-web-app`
+  - `build-ai-agent-system`
+  - `qa-browser-automation`
+
+### Changed
+
+- **README / Onboarding docs** updated to include Workflows discovery and usage:
+  - `README.md` (TOC + "Antigravity Workflows" section)
+  - `docs/GETTING_STARTED.md` (Bundles vs Workflows guidance)
+  - `docs/FAQ.md` (new Q&A: Bundles vs Workflows)
+- **Go browser automation alignment**:
+  - Workflow playbooks now include optional `@go-playwright` hooks for Go-based QA/E2E flows.
+- **Registry sync** after workflow skill addition:
+  - `CATALOG.md`
+  - `skills_index.json`
+  - `data/catalog.json`
+  - `data/bundles.json`
+
+### Contributors
+
+- [@sickn33](https://github.com/sickn33) - Workflows architecture, docs, and release integration
+
+---
+
 ## [4.11.0] - 2026-02-08 - "Clean Code & Registry Stability"
 
 > Quality improvements: Clean Code principles and deterministic builds.

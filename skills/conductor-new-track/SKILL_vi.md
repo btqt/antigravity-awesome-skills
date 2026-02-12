@@ -1,0 +1,433 @@
+---
+name: conductor-new-track
+description: Tạo một theo dõi mới với đặc tả và kế hoạch triển khai theo giai đoạn
+metadata:
+  argument-hint: <feature|bug|chore|refactor> <name>
+---
+
+# Theo dõi Mới (New Track)
+
+Tạo một theo dõi mới (tính năng, sửa lỗi, việc vặt, hoặc tái cấu trúc) với một đặc tả chi tiết và kế hoạch triển khai theo giai đoạn.
+
+## Sử dụng kỹ năng này khi
+
+- Làm việc trên các nhiệm vụ hoặc quy trình làm việc theo dõi mới
+- Cần hướng dẫn, thực tiễn tốt nhất hoặc danh sách kiểm tra cho theo dõi mới
+
+## Không sử dụng kỹ năng này khi
+
+- Nhiệm vụ không liên quan đến theo dõi mới
+- Bạn cần một miền hoặc công cụ khác ngoài phạm vi này
+
+## Hướng dẫn
+
+- Làm rõ mục tiêu, ràng buộc và đầu vào cần thiết.
+- Áp dụng các thực tiễn tốt nhất có liên quan và xác thực kết quả.
+- Cung cấp các bước có thể hành động và xác minh.
+- Nếu cần các ví dụ chi tiết, hãy mở `resources/implementation-playbook.md`.
+
+## Kiểm tra Trước chuyến bay (Pre-flight Checks)
+
+1. Xác minh Conductor đã được khởi tạo:
+   - Kiểm tra `conductor/product.md` tồn tại
+   - Kiểm tra `conductor/tech-stack.md` tồn tại
+   - Kiểm tra `conductor/workflow.md` tồn tại
+   - Nếu thiếu: Hiển thị lỗi và đề xuất chạy `/conductor:setup` trước
+
+2. Tải các tệp bối cảnh:
+   - Đọc `conductor/product.md` cho bối cảnh sản phẩm
+   - Đọc `conductor/tech-stack.md` cho bối cảnh kỹ thuật
+   - Đọc `conductor/workflow.md` cho các tùy chọn TDD/cam kết
+
+## Phân loại Theo dõi
+
+Xác định loại theo dõi dựa trên mô tả hoặc hỏi người dùng:
+
+```
+Loại theo dõi này là gì?
+
+1. Feature - Chức năng mới
+2. Bug - Sửa lỗi cho vấn đề hiện có
+3. Chore - Bảo trì, phụ thuộc, cấu hình
+4. Refactor - Cải thiện mã mà không thay đổi hành vi
+```
+
+## Thu thập Đặc tả Tương tác
+
+**QUY TẮC QUAN TRỌNG:**
+
+- Hỏi MỘT câu hỏi mỗi lần
+- Đợi phản hồi của người dùng trước khi tiếp tục
+- Điều chỉnh câu hỏi dựa trên loại theo dõi
+- Tối đa 6 câu hỏi tổng cộng
+
+### Đối với Theo dõi Tính năng
+
+**Q1: Tóm tắt Tính năng**
+
+```
+Mô tả tính năng trong 1-2 câu.
+[Nếu đối số được cung cấp, xác nhận: "Bạn muốn: {argument}. Điều này có đúng không?"]
+```
+
+**Q2: Câu chuyện Người dùng (User Story)**
+
+```
+Ai được hưởng lợi và như thế nào?
+
+Định dạng: Là một [loại người dùng], tôi muốn [hành động] để [lợi ích].
+```
+
+**Q3: Tiêu chí Chấp nhận**
+
+```
+Điều gì phải đúng để tính năng này hoàn thành?
+
+Liệt kê 3-5 tiêu chí chấp nhận (một tiêu chí mỗi dòng):
+```
+
+**Q4: Phụ thuộc**
+
+```
+Điều này có phụ thuộc vào bất kỳ mã, API hoặc theo dõi nào khác hiện có không?
+
+1. Không có phụ thuộc
+2. Phụ thuộc vào mã hiện có (chỉ định)
+3. Phụ thuộc vào theo dõi chưa hoàn thành (chỉ định)
+```
+
+**Q5: Ranh giới Phạm vi**
+
+```
+Điều gì được loại trừ RÕ RÀNG khỏi phạm vi của theo dõi này?
+(Giúp ngăn chặn phạm vi leo thang)
+```
+
+**Q6: Cân nhắc Kỹ thuật (tùy chọn)**
+
+```
+Bất kỳ cách tiếp cận kỹ thuật hoặc ràng buộc cụ thể nào?
+(Nhấn enter để bỏ qua)
+```
+
+### Đối với Theo dõi Lỗi (Bug)
+
+**Q1: Tóm tắt Lỗi**
+
+```
+Cái gì bị hỏng?
+[Nếu đối số được cung cấp, xác nhận]
+```
+
+**Q2: Các bước để Tái tạo**
+
+```
+Lỗi này có thể được tái tạo như thế nào?
+Liệt kê các bước:
+```
+
+**Q3: Hành vi Mong đợi vs Thực tế**
+
+```
+Điều gì nên xảy ra so với những gì thực sự xảy ra?
+```
+
+**Q4: Các khu vực bị ảnh hưởng**
+
+```
+Những phần nào của hệ thống bị ảnh hưởng?
+```
+
+**Q5: Giả thuyết Nguyên nhân Gốc rễ (tùy chọn)**
+
+```
+Bất kỳ giả thuyết nào về nguyên nhân?
+(Nhấn enter để bỏ qua)
+```
+
+### Đối với Theo dõi Chore/Refactor
+
+**Q1: Tóm tắt Nhiệm vụ**
+
+```
+Cần phải làm gì?
+[Nếu đối số được cung cấp, xác nhận]
+```
+
+**Q2: Động lực**
+
+```
+Tại sao công việc này lại cần thiết?
+```
+
+**Q3: Tiêu chí Thành công**
+
+```
+Làm thế nào chúng ta biết điều này đã hoàn thành?
+```
+
+**Q4: Đánh giá Rủi ro**
+
+```
+Điều gì có thể đi sai? Bất kỳ thay đổi rủi ro nào?
+```
+
+## Tạo ID Theo dõi
+
+Tạo ID theo dõi theo định dạng: `{shortname}_{YYYYMMDD}`
+
+- Trích xuất tên ngắn từ tóm tắt tính năng/lỗi (2-3 từ, chữ thường, gạch nối)
+- Sử dụng ngày hiện tại
+- Ví dụ: `user-auth_20250115`, `nav-bug_20250115`
+
+Xác thực tính duy nhất:
+
+- Kiểm tra `conductor/tracks.md` cho các ID hiện có
+- Nếu trùng lặp, thêm bộ đếm: `user-auth_20250115_2`
+
+## Tạo Đặc tả
+
+Tạo `conductor/tracks/{trackId}/spec.md`:
+
+```markdown
+# Specification: {Track Title}
+
+**Track ID:** {trackId}
+**Type:** {Feature|Bug|Chore|Refactor}
+**Created:** {YYYY-MM-DD}
+**Status:** Draft
+
+## Summary
+
+{1-2 sentence summary}
+
+## Context
+
+{Product context from product.md relevant to this track}
+
+## User Story (for features)
+
+As a {user}, I want to {action} so that {benefit}.
+
+## Problem Description (for bugs)
+
+{Bug description, steps to reproduce}
+
+## Acceptance Criteria
+
+- [ ] {Criterion 1}
+- [ ] {Criterion 2}
+- [ ] {Criterion 3}
+
+## Dependencies
+
+{List dependencies or "None"}
+
+## Out of Scope
+
+{Explicit exclusions}
+
+## Technical Notes
+
+{Technical considerations or "None specified"}
+
+---
+
+_Generated by Conductor. Review and edit as needed._
+```
+
+## Người dùng Xem xét Spec
+
+Hiển thị spec đã tạo và hỏi:
+
+```
+Dưới đây là đặc tả tôi đã tạo:
+
+{spec content}
+
+Đặc tả này có đúng không?
+1. Có, tiến hành tạo kế hoạch
+2. Không, để tôi chỉnh sửa (mở ra để chỉnh sửa nội tuyến)
+3. Bắt đầu lại với các đầu vào khác
+```
+
+## Tạo Kế hoạch
+
+Sau khi phê duyệt spec, tạo `conductor/tracks/{trackId}/plan.md`:
+
+### Cấu trúc Kế hoạch
+
+```markdown
+# Implementation Plan: {Track Title}
+
+**Track ID:** {trackId}
+**Spec:** [spec.md](./spec.md)
+**Created:** {YYYY-MM-DD}
+**Status:** [ ] Not Started
+
+## Overview
+
+{Brief summary of implementation approach}
+
+## Phase 1: {Phase Name}
+
+{Phase description}
+
+### Tasks
+
+- [ ] Task 1.1: {Description}
+- [ ] Task 1.2: {Description}
+- [ ] Task 1.3: {Description}
+
+### Verification
+
+- [ ] {Verification step for phase 1}
+
+## Phase 2: {Phase Name}
+
+{Phase description}
+
+### Tasks
+
+- [ ] Task 2.1: {Description}
+- [ ] Task 2.2: {Description}
+
+### Verification
+
+- [ ] {Verification step for phase 2}
+
+## Phase 3: {Phase Name} (if needed)
+
+...
+
+## Final Verification
+
+- [ ] All acceptance criteria met
+- [ ] Tests passing
+- [ ] Documentation updated (if applicable)
+- [ ] Ready for review
+
+---
+
+_Generated by Conductor. Tasks will be marked [~] in progress and [x] complete._
+```
+
+### Hướng dẫn Giai đoạn
+
+- Nhóm các nhiệm vụ liên quan thành các giai đoạn hợp lý
+- Mỗi giai đoạn phải có thể xác minh độc lập
+- Bao gồm nhiệm vụ xác minh sau mỗi giai đoạn
+- Các theo dõi TDD: Bao gồm các nhiệm vụ viết kiểm thử trước khi thực hiện các nhiệm vụ triển khai
+- Cấu trúc điển hình:
+  1. **Thiết lập/Nền tảng** - Giàn giáo ban đầu, giao diện
+  2. **Triển khai Cốt lõi** - Chức năng chính
+  3. **Tích hợp** - Kết nối với hệ thống hiện có
+  4. **Đánh bóng** - Xử lý lỗi, trường hợp biên, tài liệu
+
+## Người dùng Xem xét Kế hoạch
+
+Hiển thị kế hoạch đã tạo và hỏi:
+
+```
+Dưới đây là kế hoạch triển khai:
+
+{plan content}
+
+Kế hoạch này có đúng không?
+1. Có, tạo theo dõi
+2. Không, để tôi chỉnh sửa (mở ra để chỉnh sửa nội tuyến)
+3. Thêm các giai đoạn/nhiệm vụ khác
+4. Bắt đầu lại
+```
+
+## Tạo Theo dõi
+
+Sau khi phê duyệt kế hoạch:
+
+1. Tạo cấu trúc thư mục:
+
+   ```
+   conductor/tracks/{trackId}/
+   ├── spec.md
+   ├── plan.md
+   ├── metadata.json
+   └── index.md
+   ```
+
+2. Tạo `metadata.json`:
+
+   ```json
+   {
+     "id": "{trackId}",
+     "title": "{Track Title}",
+     "type": "feature|bug|chore|refactor",
+     "status": "pending",
+     "created": "ISO_TIMESTAMP",
+     "updated": "ISO_TIMESTAMP",
+     "phases": {
+       "total": N,
+       "completed": 0
+     },
+     "tasks": {
+       "total": M,
+       "completed": 0
+     }
+   }
+   ```
+
+3. Tạo `index.md`:
+
+   ```markdown
+   # Track: {Track Title}
+
+   **ID:** {trackId}
+   **Status:** Pending
+
+   ## Documents
+
+   - [Specification](./spec.md)
+   - [Implementation Plan](./plan.md)
+
+   ## Progress
+
+   - Phases: 0/{N} complete
+   - Tasks: 0/{M} complete
+
+   ## Quick Links
+
+   - [Back to Tracks](../../tracks.md)
+   - [Product Context](../../product.md)
+   ```
+
+4. Đăng ký trong `conductor/tracks.md`:
+   - Thêm hàng vào bảng theo dõi
+   - Định dạng: `| [ ] | {trackId} | {title} | {created} | {created} |`
+
+5. Cập nhật `conductor/index.md`:
+   - Thêm theo dõi vào phần "Active Tracks"
+
+## Thông báo Hoàn thành
+
+```
+Track created successfully!
+
+Track ID: {trackId}
+Location: conductor/tracks/{trackId}/
+
+Files created:
+- spec.md - Requirements specification
+- plan.md - Phased implementation plan
+- metadata.json - Track metadata
+- index.md - Track navigation
+
+Next steps:
+1. Review spec.md and plan.md, make any edits
+2. Run /conductor:implement {trackId} to start implementation
+3. Run /conductor:status to see project progress
+```
+
+## Xử lý Lỗi
+
+- Nếu tạo thư mục thất bại: Dừng và báo cáo, không đăng ký trong tracks.md
+- Nếu bất kỳ ghi tệp nào thất bại: Dọn dẹp theo dõi một phần, báo cáo lỗi
+- Nếu cập nhật tracks.md thất bại: Cảnh báo người dùng đăng ký theo dõi thủ công

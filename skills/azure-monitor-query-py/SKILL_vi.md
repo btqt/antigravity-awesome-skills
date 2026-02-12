@@ -1,0 +1,252 @@
+---
+name: azure-monitor-query-py
+description: |
+  Azure Monitor Query SDK cho Python. Sử dụng để truy vấn Log Analytics workspaces và số liệu (metrics) của Azure Monitor.
+  Triggers: "azure-monitor-query", "LogsQueryClient", "MetricsQueryClient", "Log Analytics", "Kusto queries", "Azure metrics".
+package: azure-monitor-query
+---
+
+# Azure Monitor Query SDK cho Python
+
+Truy vấn nhật ký và số liệu từ Azure Monitor và Log Analytics workspaces.
+
+## Cài đặt
+
+```bash
+pip install azure-monitor-query
+```
+
+## Biến Môi trường
+
+```bash
+# Log Analytics
+AZURE_LOG_ANALYTICS_WORKSPACE_ID=<workspace-id>
+
+# Metrics
+AZURE_METRICS_RESOURCE_URI=/subscriptions/<sub>/resourceGroups/<rg>/providers/<provider>/<type>/<name>
+```
+
+## Xác thực
+
+```python
+from azure.identity import DefaultAzureCredential
+
+credential = DefaultAzureCredential()
+```
+
+## Logs Query Client
+
+### Truy vấn Cơ bản
+
+```python
+from azure.monitor.query import LogsQueryClient
+from datetime import timedelta
+
+client = LogsQueryClient(credential)
+
+query = """
+AppRequests
+| where TimeGenerated > ago(1h)
+| summarize count() by bin(TimeGenerated, 5m), ResultCode
+| order by TimeGenerated desc
+"""
+
+response = client.query_workspace(
+    workspace_id=os.environ["AZURE_LOG_ANALYTICS_WORKSPACE_ID"],
+    query=query,
+    timespan=timedelta(hours=1)
+)
+
+for table in response.tables:
+    for row in table.rows:
+        print(row)
+```
+
+### Truy vấn với Khoảng thời gian
+
+```python
+from datetime import datetime, timezone
+
+response = client.query_workspace(
+    workspace_id=workspace_id,
+    query="AppRequests | take 10",
+    timespan=(
+        datetime(2024, 1, 1, tzinfo=timezone.utc),
+        datetime(2024, 1, 2, tzinfo=timezone.utc)
+    )
+)
+```
+
+### Chuyển đổi sang DataFrame
+
+```python
+import pandas as pd
+
+response = client.query_workspace(workspace_id, query, timespan=timedelta(hours=1))
+
+if response.tables:
+    table = response.tables[0]
+    df = pd.DataFrame(data=table.rows, columns=[col.name for col in table.columns])
+    print(df.head())
+```
+
+### Truy vấn Theo Lô (Batch Query)
+
+```python
+from azure.monitor.query import LogsBatchQuery
+
+queries = [
+    LogsBatchQuery(workspace_id=workspace_id, query="AppRequests | take 5", timespan=timedelta(hours=1)),
+    LogsBatchQuery(workspace_id=workspace_id, query="AppExceptions | take 5", timespan=timedelta(hours=1))
+]
+
+responses = client.query_batch(queries)
+
+for response in responses:
+    if response.tables:
+        print(f"Rows: {len(response.tables[0].rows)}")
+```
+
+### Xử lý Kết quả Một phần
+
+```python
+from azure.monitor.query import LogsQueryStatus
+
+response = client.query_workspace(workspace_id, query, timespan=timedelta(hours=24))
+
+if response.status == LogsQueryStatus.PARTIAL:
+    print(f"Partial results: {response.partial_error}")
+elif response.status == LogsQueryStatus.FAILURE:
+    print(f"Query failed: {response.partial_error}")
+```
+
+## Metrics Query Client
+
+### Truy vấn Metrics Tài nguyên
+
+```python
+from azure.monitor.query import MetricsQueryClient
+from datetime import timedelta
+
+metrics_client = MetricsQueryClient(credential)
+
+response = metrics_client.query_resource(
+    resource_uri=os.environ["AZURE_METRICS_RESOURCE_URI"],
+    metric_names=["Percentage CPU", "Network In Total"],
+    timespan=timedelta(hours=1),
+    granularity=timedelta(minutes=5)
+)
+
+for metric in response.metrics:
+    print(f"{metric.name}:")
+    for time_series in metric.timeseries:
+        for data in time_series.data:
+            print(f"  {data.timestamp}: {data.average}")
+```
+
+### Aggregations
+
+```python
+from azure.monitor.query import MetricAggregationType
+
+response = metrics_client.query_resource(
+    resource_uri=resource_uri,
+    metric_names=["Requests"],
+    timespan=timedelta(hours=1),
+    aggregations=[
+        MetricAggregationType.AVERAGE,
+        MetricAggregationType.MAXIMUM,
+        MetricAggregationType.MINIMUM,
+        MetricAggregationType.COUNT
+    ]
+)
+```
+
+### Lọc theo Dimension
+
+```python
+response = metrics_client.query_resource(
+    resource_uri=resource_uri,
+    metric_names=["Requests"],
+    timespan=timedelta(hours=1),
+    filter="ApiName eq 'GetBlob'"
+)
+```
+
+### Liệt kê Định nghĩa Metric
+
+```python
+definitions = metrics_client.list_metric_definitions(resource_uri)
+for definition in definitions:
+    print(f"{definition.name}: {definition.unit}")
+```
+
+### Liệt kê Namespaces Metric
+
+```python
+namespaces = metrics_client.list_metric_namespaces(resource_uri)
+for ns in namespaces:
+    print(ns.fully_qualified_namespace)
+```
+
+## Async Clients
+
+```python
+from azure.monitor.query.aio import LogsQueryClient, MetricsQueryClient
+from azure.identity.aio import DefaultAzureCredential
+
+async def query_logs():
+    credential = DefaultAzureCredential()
+    client = LogsQueryClient(credential)
+
+    response = await client.query_workspace(
+        workspace_id=workspace_id,
+        query="AppRequests | take 10",
+        timespan=timedelta(hours=1)
+    )
+
+    await client.close()
+    await credential.close()
+    return response
+```
+
+## Các Truy vấn Kusto Phổ biến
+
+```kusto
+// Requests theo mã trạng thái
+AppRequests
+| summarize count() by ResultCode
+| order by count_ desc
+
+// Exceptions theo thời gian
+AppExceptions
+| summarize count() by bin(TimeGenerated, 1h)
+
+// Requests chậm
+AppRequests
+| where DurationMs > 1000
+| project TimeGenerated, Name, DurationMs
+| order by DurationMs desc
+
+// Top errors
+AppExceptions
+| summarize count() by ExceptionType
+| top 10 by count_
+```
+
+## Các Loại Client
+
+| Client               | Mục đích                          |
+| -------------------- | --------------------------------- |
+| `LogsQueryClient`    | Truy vấn Log Analytics workspaces |
+| `MetricsQueryClient` | Truy vấn Azure Monitor metrics    |
+
+## Thực hành Tốt nhất
+
+1. **Sử dụng timedelta** cho các khoảng thời gian tương đối
+2. **Xử lý kết quả một phần** cho các truy vấn lớn
+3. **Sử dụng truy vấn lô** khi chạy nhiều truy vấn
+4. **Thiết lập granularity phù hợp** cho metrics để giảm số lượng điểm dữ liệu
+5. **Chuyển đổi sang DataFrame** để phân tích dữ liệu dễ dàng hơn
+6. **Sử dụng aggregations** để tóm tắt dữ liệu metric
+7. **Lọc theo dimensions** để thu hẹp kết quả metric

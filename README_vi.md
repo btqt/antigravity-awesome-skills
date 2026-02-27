@@ -252,7 +252,7 @@ Bundles giúp bạn chọn skills. Workflows giúp bạn thực hiện chúng th
 
 Bắt đầu tại đây:
 
-- [docs/WORKFLOWS.md](docs/WORKFLOWS.md): các playbook dễ đọc cho con người.
+- [docs/WORKFLOWS.md](docs/WORKFLOWS_vi.md): các playbook dễ đọc cho con người.
 - [data/workflows.json](data/workflows.json): metadata workflow có thể đọc được bằng máy.
 
 Các workflows ban đầu bao gồm:
@@ -278,13 +278,13 @@ Repository được tổ chức thành các domain chuyên biệt để biến A
 | Testing        | TDD, test design, fixes, QA workflows               | `test-driven-development`, `testing-patterns`, `test-fixing`                    |
 | Workflow       | Automation, orchestration, jobs, agents             | `workflow-automation`, `inngest`, `trigger-dev`                                 |
 
-Số lượng thay đổi khi các skills mới được thêm vào. Để xem Registry đầy đủ hiện tại, hãy xem [CATALOG.md](CATALOG.md).
+Số lượng thay đổi khi các skills mới được thêm vào. Để xem Registry đầy đủ hiện tại, hãy xem [CATALOG.md](CATALOG_vi.md).
 
 ## Duyệt hơn 845 Skills
 
 Chúng tôi đã chuyển Registry skill đầy đủ sang một catalog riêng để giữ cho README này sạch sẽ.
 
-👉 **[Xem Catalog Skill Đầy đủ (CATALOG.md)](CATALOG.md)**
+👉 **[Xem Catalog Skill Đầy đủ (CATALOG.md)](CATALOG_vi.md)**
 
 ---
 

@@ -513,8 +513,8 @@ Month 1 (Nguyên Tháng 1 bay qua): Tụ gõ đinh ngồi chễm trệ dán cái
 
 **Bạn có phải là kẻ nghiền học theo kiểu thị giác dạng Visual learner phải không?** Sách gối đầu này chắc chắn là đồ đáng xài hỗ trợ chánh cống gãi phát ăn ngay vô luôn trúng chỗ ngứa để sướng cho ông đấy! Mắc gì có còn tồn ứ dư hơi ba mớ dăm chục ba vụ questions cần nhả đâu à hử? Thử nghía mụ sang cái đống lân bang chà trộn sau đi thêm:
 
-- [GETTING_STARTED.md](GETTING_STARTED.md) - Cái bản hướng mớm dẫn đút gọn chữ nhai kiểu Text-based nhác mà thôi
-- [SKILL_ANATOMY.md](SKILL_ANATOMY.md) - Rã lấy xác moi mổ chẻ cấu phần chia ngóc chi tiết bét be Detailed breakdown
+- [GETTING_STARTED.md](GETTING_STARTED_vi.md) - Cái bản hướng mớm dẫn đút gọn chữ nhai kiểu Text-based nhác mà thôi
+- [SKILL_ANATOMY.md](SKILL_ANATOMY_vi.md) - Rã lấy xác moi mổ chẻ cấu phần chia ngóc chi tiết bét be Detailed breakdown
 - [CONTRIBUTING.md](../CONTRIBUTING.md) - Mọi chánh lối mở rào dọn xói để nộp đóng múc gạch đóng contribute
 
 **Liệu đã chuẩn ráng lên cơ dâng góp chút nổ góp công mang tâm hồn cống hiến đóng góp contribute rồi chưa đấy ông à?** Tới đi tới đi đụ mọc cánh bướm tới tấp nhé! 💪

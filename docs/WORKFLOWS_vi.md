@@ -20,7 +20,7 @@ Nếu ví bundles như là hộp đồ nghề (toolbox) của bạn, thì workfl
 3. Thực thi các bước theo đúng trình tự và tiến hành gọi (invoke) các skills được liệt kê trong từng bước tương ứng.
 4. Lưu giữ lại các kết quả đầu ra (output artifacts) ở mỗi một bước (chẳng hạn như bản plan, các decisions, các files tests và validation evidence).
 
-Bạn hoàn toàn có thể kết hợp các workflows với các bundles từ file [BUNDLES.md](BUNDLES.md) khi bạn mong muốn mức độ bao phủ (coverage) rộng hơn.
+Bạn hoàn toàn có thể kết hợp các workflows với các bundles từ file [BUNDLES.md](BUNDLES_vi.md) khi bạn mong muốn mức độ bao phủ (coverage) rộng hơn.
 
 ---
 

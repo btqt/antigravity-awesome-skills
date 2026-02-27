@@ -41,7 +41,7 @@ git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skill
 
 ### 2. Chọn Persona của bạn
 
-Tìm một bundle phù hợp với vai trò của bạn (xem [BUNDLES.md](BUNDLES.md)):
+Tìm một bundle phù hợp với vai trò của bạn (xem [BUNDLES.md](BUNDLES_vi.md)):
 
 | Persona               | Tên Bundle     | Có những gì bên trong?                                             |
 | :-------------------- | :------------- | :----------------------------------------------------------------- |
@@ -59,7 +59,7 @@ Bundles và workflows giải quyết những vấn đề khác nhau:
 - **Bundles** = những tập hợp được tinh tuyển theo vai trò chức năng (chỉ ra những gì cần dùng).
 - **Workflows** = những bản cẩm nang hướng dẫn theo từng bước một (cách thức thực thi).
 
-Hãy bắt đàu với các bundles trong file [BUNDLES.md](BUNDLES.md), sau đó chạy một workflow từ file [WORKFLOWS.md](WORKFLOWS.md) khi bạn cần một hướng dẫn thực thi cụ thể.
+Hãy bắt đàu với các bundles trong file [BUNDLES.md](BUNDLES_vi.md), sau đó chạy một workflow từ file [WORKFLOWS.md](WORKFLOWS_vi.md) khi bạn cần một hướng dẫn thực thi cụ thể.
 
 Ví dụ:
 
@@ -112,14 +112,14 @@ Chúng tôi phân loại các skills để bạn biết mình đang khởi chạ
 - 🔵 **Safe**: Các skills từ cộng đồng đảm bảo tính bảo toàn không gây phá hoại (Chỉ-đọc (Read-only)/Lên kế hoạch (Planning)).
 - 🔴 **Risk**: Các skills sẽ có khả năng sửa đổi hệ thống hay tiến hành các đợt rà quét an ninh (Chỉ sử dụng khi được cấp phép).
 
-_Kiểm tra [Skill Catalog](../CATALOG.md) để xem trọn danh sách đầy đủ._
+_Kiểm tra [Skill Catalog](../CATALOG_vi.md) để xem trọn danh sách đầy đủ._
 
 ---
 
 ## ❓ FAQ
 
 **Q: Tôi có cần cài đặt tất cả hơn 700 skills hay không?**
-A: Bạn chỉ phải thực hiện lệnh clone nguyên chiếc repo lại 1 lần; AI của bạn chỉ _đọc (reads)_ các skills khi bạn có nhu cầu triệu gọi (hoặc liên quan), bởi việc đó nhờ vậy tổng thể vẫn giữ được sự nhẹ nhàng (lightweight) cần thiết. Những **Starter Packs** theo danh mục trong file [BUNDLES.md](BUNDLES.md) là những gợi ý có giá trị lớn dành cho bạn nhằm mục tiêu khai phá xem những skills gì hoàn hảo với mục tiêu phát triển đang diễn ra—nhấn mạnh rằng tính năng đấy không làm quy trình tải về ban đầu rườm rà thêm.
+A: Bạn chỉ phải thực hiện lệnh clone nguyên chiếc repo lại 1 lần; AI của bạn chỉ _đọc (reads)_ các skills khi bạn có nhu cầu triệu gọi (hoặc liên quan), bởi việc đó nhờ vậy tổng thể vẫn giữ được sự nhẹ nhàng (lightweight) cần thiết. Những **Starter Packs** theo danh mục trong file [BUNDLES.md](BUNDLES_vi.md) là những gợi ý có giá trị lớn dành cho bạn nhằm mục tiêu khai phá xem những skills gì hoàn hảo với mục tiêu phát triển đang diễn ra—nhấn mạnh rằng tính năng đấy không làm quy trình tải về ban đầu rườm rà thêm.
 
 **Q: Tôi có thể tạo skills của riêng mình được không?**
 A: Chắc chắn rồi! Dùng skill **@skill-creator** theo để xây dựng cho mình tính năng cá nhân nào đó đó đi nha.
@@ -131,6 +131,6 @@ A: Có đấy, trả cho Giấy phép MIT. Mãi mãi Open Source.
 
 ## ⏭️ Các bước tiếp theo (Next Steps)
 
-1. [Duyệt qua các Bundles](BUNDLES.md)
-2. [Tham khảo các Ví dụ Thực tế](EXAMPLES.md)
+1. [Duyệt qua các Bundles](BUNDLES_vi.md)
+2. [Tham khảo các Ví dụ Thực tế](EXAMPLES_vi.md)
 3. [Hãy đóng góp thêm một Skill mới](../CONTRIBUTING.md)
